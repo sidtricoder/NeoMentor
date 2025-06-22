@@ -162,8 +162,7 @@ class CourseSchedulerAgent(BaseAgent):
         """Initialize Google services for ADK functionality"""
         try:
             # Initialize Gemini 2.0 Flash
-            GOOGLE_AI_API_KEY = "AIzaSyDs0rGErXBVJLaMd7HoQrhU2FhrSyhx368"
-            genai.configure(api_key=GOOGLE_AI_API_KEY)
+            genai.configure(api_key=os.getenv("GOOGLE_AI_API_KEY"))
             self.gemini_model = genai.GenerativeModel('gemini-2.0-flash-exp')
             logger.info("Gemini 2.0 Flash initialized for course scheduling")
             
@@ -760,7 +759,3 @@ class SchedulerManager:
         except Exception as e:
             logger.error(f"Error getting analytics: {e}")
             return {"error": str(e)}
-
-
-# Global instance
-scheduler_manager = SchedulerManager()

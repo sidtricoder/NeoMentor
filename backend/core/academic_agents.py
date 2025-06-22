@@ -74,9 +74,8 @@ class SmartCourseSchedulerAgent(BaseAgent):
     def _initialize_services(self):
         """Initialize Google services."""
         try:
-            # Initialize Gemini 2.0 Flash with hardcoded API key
-            GOOGLE_AI_API_KEY = "AIzaSyDs0rGErXBVJLaMd7HoQrhU2FhrSyhx368"
-            genai.configure(api_key=GOOGLE_AI_API_KEY)
+            # GOOGLE_AI_API_KEY assignment removed; now uses environment variable
+            genai.configure(api_key=os.getenv("GOOGLE_AI_API_KEY"))
             self.gemini_model = genai.GenerativeModel('gemini-2.0-flash-exp')
             logger.info("Gemini 2.0 Flash initialized successfully")
             
@@ -481,9 +480,8 @@ class SyllabusGeneratorAgent(BaseAgent):
     def _initialize_services(self):
         """Initialize Google services."""
         try:
-            # Initialize Gemini 2.0 Flash with hardcoded API key
-            GOOGLE_AI_API_KEY = "AIzaSyDs0rGErXBVJLaMd7HoQrhU2FhrSyhx368"
-            genai.configure(api_key=GOOGLE_AI_API_KEY)
+            # GOOGLE_AI_API_KEY assignment removed; now uses environment variable
+            genai.configure(api_key=os.getenv("GOOGLE_AI_API_KEY"))
             self.gemini_model = genai.GenerativeModel('gemini-2.0-flash-exp')
             logger.info("Gemini 2.0 Flash initialized for syllabus generation")
             
@@ -914,8 +912,8 @@ class SyllabusFormatterAgent(BaseAgent):
     def _initialize_services(self):
         """Initialize Gemini service."""
         try:
-            GOOGLE_AI_API_KEY = "AIzaSyDs0rGErXBVJLaMd7HoQrhU2FhrSyhx368"
-            genai.configure(api_key=GOOGLE_AI_API_KEY)
+            # GOOGLE_AI_API_KEY assignment removed; now uses environment variable
+            genai.configure(api_key=os.getenv("GOOGLE_AI_API_KEY"))
             self.gemini_model = genai.GenerativeModel('gemini-2.0-flash-exp')
             logger.info("Gemini 2.0 Flash initialized for formatter")
         except Exception as e:

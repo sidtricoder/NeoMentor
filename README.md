@@ -11,9 +11,11 @@ NeoMentor is a fully functional multi-agent AI system that generates educational
 - 🎯 **Vertex AI Integration**: Uses Google's Gemini 2.0 Flash model for educational content generation
 - 🎬 **Video Generation**: Google Veo 2.0 for professional educational video creation
 - 🎤 **Voice Cloning**: F5-TTS for natural speech synthesis and voice generation
-- 🤖 **Multi-Agent Pipeline**: Specialized agents for formatting, research, media generation, and final assembly
+- 🤖 **Multi-Agent Pipeline**: Specialized agents for formatting, research, scheduling, analytics, media generation, and final assembly
+- 📅 **Course & Syllabus Scheduling**: AI-powered course and syllabus scheduling
+- 📊 **Analytics**: User and session analytics with insights and recommendations
 - 🔄 **Frame Continuity**: Seamless video transitions using extracted frames
-- ⚡ **Real-time Processing**: FastAPI backend with WebSocket support for live updates
+- ⚡ **Real-time Processing & Logs**: FastAPI backend with WebSocket support for live updates and log streaming
 - 🔐 **Authentication**: Google Firebase Authentication
 - 💾 **Database**: Firestore for session and user data storage
 - 📱 **Modern Responsive UI**: Beautiful React TypeScript interface with Tailwind CSS
@@ -32,8 +34,10 @@ NeoMentor is a fully functional multi-agent AI system that generates educational
 
 1. **Formatter Agent**: Processes and formats input data
 2. **Research Agent**: Conducts relevant research and fact-checking
-3. **Video Generation Agent**: Creates video content based on inputs
-4. **Final Agent**: Merges all components into the final output
+3. **Scheduler Agent**: AI-powered course and syllabus scheduling
+4. **Analytics Agent**: Provides user/session analytics and recommendations
+5. **Video Generation Agent**: Creates video content based on inputs
+6. **Final Agent**: Merges all components into the final output
 
 ## 🛠️ Technology Stack
 
@@ -133,14 +137,6 @@ cd backend && uvicorn main:app --host 0.0.0.0 --port 8000
 # Terminal 2  
 cd frontend && npm start
 ```
-
-### 🔍 Verify Deployment
-- [ ] Frontend accessible at http://localhost:3000
-- [ ] Backend API accessible at http://localhost:8000
-- [ ] API docs available at http://localhost:8000/docs
-- [ ] Authentication working (Google sign-in)
-- [ ] File uploads working
-- [ ] Video generation pipeline functional
 
 ## 🚀 Quick Start
 
@@ -284,7 +280,9 @@ The application will be available at:
 2. **Upload an Image**: Provide visual context for your request
 3. **Upload an Audio File**: Add audio elements to your content
 4. **Click "Generate Video"**: Let the AI agents process your inputs
-5. **Download Your Video**: Get your personalized video content
+5. **View Real-time Logs**: Watch live progress and logs in the UI
+6. **Download Your Video**: Get your personalized video content
+7. **View Analytics**: Access analytics and recommendations for your sessions
 
 ## 🔧 Configuration
 
@@ -344,29 +342,25 @@ The application uses the following environment variables:
 
 ## 📚 API Documentation
 
-### Endpoints
+### Endpoints (New/Updated)
 
-#### Health Check
+#### Analytics
 ```http
-GET /health
-```
-Returns system health status.
+POST /analytics
+Content-Type: application/json
 
-#### Process Request
-```http
-POST /process
-Content-Type: multipart/form-data
-
-Form Data:
-- prompt: string (required)
-- image: file (required)
-- audio: file (required)
+Body:
+{
+  "user_id": "string",
+  "date_range": {"start": "YYYY-MM-DD", "end": "YYYY-MM-DD"},
+  "metrics": ["sessions", "videos_generated", ...]
+}
 ```
 
-#### Session Management
+#### Real-time Logs
 ```http
-GET /sessions/{session_id}
-GET /sessions/{session_id}/status
+GET /ws/logs/{session_id}
+(WebSocket endpoint for real-time log streaming)
 ```
 
 ### Response Format
@@ -691,13 +685,14 @@ ls backend/logs/sessions/
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgments
 
 - Google Agent Development Kit team
 - React and FastAPI communities
 - All contributors to this project
+- [F5TTS-HuggingFace](https://huggingface.co/spaces/mrfakename/E2-F5-TTS)
 
 ## 📞 Support
 
