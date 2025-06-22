@@ -51,6 +51,7 @@ NeoMentor is a fully functional multi-agent AI system that generates educational
 - **Firebase SDK** for authentication
 
 ### Backend
+-**Google ADK** for well built AI Agents
 - **FastAPI** for high-performance API
 - **Google Vertex AI** with Gemini 2.0 Flash
 - **Firebase Admin SDK** for authentication
@@ -59,45 +60,6 @@ NeoMentor is a fully functional multi-agent AI system that generates educational
 - **F5-TTS** for voice cloning
 - **FFmpeg** for media processing
 - **Python 3.9+** with async/await support
-
-## 📁 Project Structure
-
-```
-NeoMentor/
-├── backend/
-│   ├── main.py                 # FastAPI application entry point
-│   ├── requirements.txt        # Python dependencies
-│   ├── .env                    # Environment variables
-│   ├── core/
-│   │   ├── __init__.py
-│   │   ├── agents.py          # Main agent implementations
-│   │   ├── agents_vertex.py   # Vertex AI agent implementations
-│   │   ├── auth.py            # Firebase authentication
-│   │   ├── video_gen.py       # Video generation utilities
-│   │   ├── voice_cloner.py    # Voice cloning implementation
-│   │   └── voice.py           # Voice processing utilities
-│   ├── utils/
-│   │   ├── __init__.py
-│   │   ├── file_manager.py    # File handling utilities
-│   │   └── media_processor.py # Media processing utilities
-│   ├── generated_media/       # Generated content storage
-│   ├── uploads/               # User uploaded files
-│   └── logs/                  # Application logs
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   └── NeoMentorInterface.tsx # Main UI component
-│   │   ├── App.tsx            # Main application component
-│   │   ├── App.css            # Application styles
-│   │   └── index.tsx          # Entry point
-│   ├── public/                # Static assets
-│   ├── package.json           # Node.js dependencies
-│   ├── tailwind.config.js     # Tailwind CSS configuration
-│   └── .env                   # Environment variables
-├── firestore.rules            # Firestore security rules
-├── storage.rules              # Firebase storage rules
-└── README.md                  # This file
-```
 
 ## 📦 Quick Deployment Checklist
 
