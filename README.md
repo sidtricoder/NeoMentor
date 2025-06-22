@@ -30,6 +30,8 @@ NeoMentor is a fully functional multi-agent AI system that generates educational
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
+![Architecture](https://github.com/sidtricoder/NeoMentor/blob/master/final-diagram.png)
+
 ### Agent Pipeline Flow
 
 1. **Formatter Agent**: Processes and formats input data
