@@ -1,0 +1,25 @@
+# Backend .dockerignore
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+.git
+.gitignore
+*.md
+.pytest_cache
+.coverage
+.venv
+env/
+venv/
+ENV/
+generated_media/*
+uploads/*
+logs/*
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

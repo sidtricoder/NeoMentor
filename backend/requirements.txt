@@ -1,0 +1,41 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+aiofiles==23.2.1
+python-dotenv==1.0.0
+requests==2.31.0
+pillow>=10.0.0
+google-generativeai>=0.3.0
+opencv-python==4.8.1.78
+numpy>=1.24.0
+moviepy==1.0.3
+scipy==1.11.4
+librosa==0.10.1
+soundfile==0.12.1
+pydantic==2.5.0
+
+# Vertex AI and Google Cloud dependencies
+google-cloud-aiplatform>=1.38.0
+vertexai>=1.38.0
+google-auth>=2.23.0
+google-cloud-storage>=2.10.0
+
+# Firebase dependencies for authentication and database
+firebase-admin>=6.2.0
+google-cloud-firestore>=2.13.0
+
+# Voice cloning dependencies
+gradio-client>=1.4.0
+soundfile>=0.12.1
+
+# Additional dependencies for media processing
+ffmpeg-python>=0.2.0
+
+# Google API and Calendar dependencies
+google-api-python-client>=2.108.0
+google-auth-httplib2>=0.2.0
+google-auth-oauthlib>=1.1.0
+google-api-core>=2.11.0
+
+# Additional Google AI dependencies
+google-generativeai>=0.3.2

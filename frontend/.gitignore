@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Environment variables (hardcoded in source)
+.env*
+
+# Logs
+*.log
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build and temporary files
+dist/
+build/
+*.tmp
+*.temp
+
+# Development scripts
+setup.sh
+start_dev.sh
+
+# Documentation (development only)
+README.md
+*.md
+
+# ESLint config (development only)
+.eslintrc.json
