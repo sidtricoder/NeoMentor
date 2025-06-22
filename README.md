@@ -1,6 +1,6 @@
 # NeoMentor - Multi-Agent AI System
 
-![NeoMentor Banner]([https://via.placeholder.com/800x200/667eea/ffffff?text=NeoMentor+Multi-Agent+AI+System](https://github.com/sidtricoder/NeoMentor/blob/master/icon.png))
+![NeoMentor Banner](https://github.com/sidtricoder/NeoMentor/blob/master/icon.png)
 
 ## 🚀 Project Overview
 
