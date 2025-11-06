@@ -5,7 +5,7 @@
 ## 🚀 Project Overview
 
 NeoMentor is a fully functional multi-agent AI system that generates educational videos using Google's Vertex AI, Firebase for authentication and database, and advanced voice cloning technology. The system processes text prompts, images, and audio through a sophisticated pipeline of specialized agents to create high-quality educational content.
-![Project Demo](https://youtu.be/0G-6u9RtCo4)
+[Project Demo](https://youtu.be/0G-6u9RtCo4)
 
 ## ✨ Key Features
 
